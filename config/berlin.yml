@@ -808,7 +808,7 @@ scrapers:
         value: "Germany"
       - name: "location"
         value: "Uber Arena"
-      - name: source
+      - name: sourceUrl
         type: url
         value: https://www.uber-arena.de/en/events-tickets
       - name: title
