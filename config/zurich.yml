@@ -168,6 +168,11 @@ scrapers:
           - selector: div > div.w-full > span > span.hidden > span > div > img:nth-child(2)
             attr: src
         can_be_empty: true
+      - name: warning
+        hidden: true
+        can_be_empty: true
+        location:
+          - selector: div.bg-signal-red
       - name: url
         type: url
         location:
@@ -204,6 +209,10 @@ scrapers:
       - type: click
         selector: main > section:nth-child(4) > div.justify-between > div > button:nth-child(2)
         count: 1
+    filters:
+      - field: "warning"
+        exp: "cancelled"
+        match: false
 
   - name: ElLokal
     url: "https://www.ellokal.ch/vorschau"
